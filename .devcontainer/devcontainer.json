@@ -1,0 +1,26 @@
+{
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "name": "elixir-phoenix-postgres",
+  "onCreateCommand": "elixir --version",
+  "workspaceFolder": "/workspace/my_app",
+  "service": "phoenix",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "jakebecker.elixir-ls",
+        "eamodio.gitlens",
+        "adamzapasnik.credo-linter",
+        "devkir.elixir-syntax-vscode",
+        "sztheory.hex-lens",
+        "benvp.vscode-hex-pm-intellisense",
+        "phoenixframework.phoenix",
+        "ritvyk.heex-html"
+      ],
+    }
+  },  
+  "forwardPorts": [
+    "phoenix:4000"
+  ]
+}
