@@ -4,7 +4,7 @@
   ],
   "name": "elixir-phoenix-postgres",
   "onCreateCommand": "elixir --version",
-  "workspaceFolder": "/workspace/my_app",
+  "workspaceFolder": "/workdir",
   "service": "phoenix",
   "customizations": {
     "vscode": {

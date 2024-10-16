@@ -7,7 +7,7 @@ services:
     environment:
       MIX_ENV: dev
     volumes:
-      - ../:/workspace/my_app
+      - ../:/workdir/
     command: sleep infinity
 
   db:
