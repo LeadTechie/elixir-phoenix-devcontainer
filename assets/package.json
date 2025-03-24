@@ -1,16 +1,13 @@
 {
   "name": "assets",
   "version": "1.0.0",
-  "description": "",
-  "main": "tailwind.config.js",
   "scripts": {
-    "deploy": "esbuild app.js --bundle --minify --target=es2017 --outdir=../priv/static/assets",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "npm run build:css && npm run build:js",
+    "build:js": "esbuild app.js --bundle --minify --target=es2017 --outdir=../priv/static/assets",
+    "build:css": "tailwindcss --input=css/app.css --output=../priv/static/assets/app.css --minify"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "esbuild": "^0.25.1"
+    "esbuild": "^0.25.1",
+    "tailwindcss": "^3.4.1"
   }
 }
