@@ -1,0 +1,17 @@
+app = "elixir-phoenix-devcontainer-shy-hill-8003"
+primary_region = "FRA"
+
+[build]
+dockerfile = "Dockerfile"
+
+[env]
+MIX_ENV = "prod"
+
+[[services]]
+  internal_port = 8080
+  processes = ["app"]
+  protocol = "tcp"
+  
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]

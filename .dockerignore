@@ -1,0 +1,10 @@
+# Ignore local dev files
+.devcontainer
+.git
+.gitignore
+deps
+_build
+node_modules
+test
+priv/static/*
+assets/node_modules

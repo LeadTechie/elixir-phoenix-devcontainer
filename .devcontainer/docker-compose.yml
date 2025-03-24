@@ -1,23 +1,25 @@
+version: "3.8"
+
 services:
   phoenix:
-    build: 
-      context: .
-    ports:
-      - "4000:4000"
-    environment:
-      MIX_ENV: dev
+    build: .
+    command: sleep infinity
     volumes:
       - ../:/workdir/
-    command: sleep infinity
+      - /var/run/docker.sock:/var/run/docker.sock  # <-- ADD THIS LINE
+    environment:
+      MIX_ENV: dev
+    ports:
+      - "4000:4000"
 
   db:
     image: postgres:latest
     restart: unless-stopped
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
 
 volumes:
   postgres-data:
